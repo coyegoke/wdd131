@@ -7,8 +7,11 @@
     <meta name="description"
         content="WDD 131 – Dynamic Web Fundamentals - Oyegoke C. Oyetunji - A personal e-portfolio showcasing web development skills and projects.">
     <title>WDD 131 – Dynamic Web Fundamentals - Oyegoke C. Oyetunji</title>
-    <link rel="stylesheet" href="base.css">
-    <script defer src="getdates.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/base.css">
+    <script defer src="scripts/getdates.js"></script>
 </head>
 
 <body>
@@ -27,18 +30,23 @@
         <section class="card">
             <h2>About Me</h2>
             <div class="about-me-content">
-                <div class="text-section">
-                    <p>
-                        My name is Cornelius and I live in Osun State, Nigeria. I am currently pursuing studies in web
-                        development and enjoy learning new technologies. My hobbies include reading, coding, music, and
-                        exploring nature.
-                    </p>
-                    <p>
-                        I was born in Ifon-Osun and have always been fascinated by technology and design. My
-                        goal is to become a proficient web developer and contribute to innovative projects.
-                    </p>
-                </div>
+                <p>My name is Cornelius and I live in Osun State, Nigeria. I am currently pursuing studies in web
+                    development and enjoy learning new technologies. My hobbies include reading, coding, music, and
+                    exploring nature.
+                    <br>
+                    <br>
+                    I was born in Ifon-Osun and have always been fascinated by technology and design. My
+                    goal is to become a proficient web developer and contribute to innovative projects.
+                </p>
                 <img src="images/passport.jpg" alt="Profile Image">
+            </div>
+            <h3>Osun State, Nigeria</h3>
+            <div class="country-info">
+                <img src="images/nigeria-flag.png" alt="Official Flag of Nigeria" class="flag">
+                <p>The accepted flag now consists of a vertical bicolour green-white-green; the green stands for
+                    agriculture and the white stands for unity and peace. On 1 October 1960, the modern-day flag became
+                    the first official flag of an independent Nigeria and was raised for the first time in a ceremony by
+                    Lieutenant David Ejoor.</p>
             </div>
         </section>
 
@@ -55,7 +63,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer>
         <p>
             &copy; <span id="currentyear"></span> Oyegoke Cornelius Oyetunji 🌍 Nigeria.
