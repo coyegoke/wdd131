@@ -1,0 +1,17 @@
+/* Larger View (Desktop) */
+.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* Desktop: 3 columns */
+}
+
+/* Hide hamburger menu in desktop view */
+#menuToggle {
+    display: none;
+}
+
+/* Show navigation in desktop view */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}

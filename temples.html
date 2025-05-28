@@ -10,72 +10,79 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/temples.css">
+    <link rel="stylesheet" href="styles/temples-large.css">
     <script defer src="scripts/temples.js"></script>
 </head>
 
 <body>
-    <header>
-        <h1>Temple Albums</h1>
-        <nav>
-            <a href="index.html" target="_blank">Home</a>
-            <a href="#" target="_blank">Old</a>
-            <a href="#" target="_blank">New</a>
-            <a href="#" target="_blank">Large</a>
-            <a href="#" target="_blank">Small</a>
+    <header class="site-header">
+        <h1>Temple Album</h1>
+        <nav id="navMenu">
+            <button id="menuToggle" aria-label="Toggle Navigation">
+                <span class="hamburger">&#9776;</span>
+                <span class="close">X</span>
+            </button>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#old">Old</a></li>
+                <li><a href="#new">New</a></li>
+                <li><a href="#large">Large</a></li>
+                <li><a href="#small">Small</a></li>
+            </ul>
         </nav>
     </header>
 
     <main>
-        <div>
+        <section class="gallery">
             <h1>Photo Albums</h1>
-        </div>
-        <section class="card">
-            <figure>
-                <img src="images/aba-nigeria-temple-lds.jpg" alt="Aba Nigeria Temple">
-                <figcaption>The Aba Nigeria Temple.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
-                <figcaption>The Accra Ghana Temple.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/adelaide-australia-temple-lds.jpg" alt="Adelaide Australia Temple">
-                <figcaption>The Adelaide Australia Temple.</figcaption>
-            </figure>
-            <figure>
-                <img src="images/albuquerque-temple-lds.jpg" alt="Albuquerque Temple">
-                <figcaption>The Albuquerque Temple.</figcaption>
-            </figure>
-            <figure>
-                <img src="https://via.placeholder.com/300x200" alt="Anchorage Temple">
-                <figcaption>The Anchorage Temple.</figcaption>
-            </figure>
-            <figure>
-                <img src="https://via.placeholder.com/300x200" alt="Arequipa Peru Temple">
-                <figcaption>The Arequipa Peru Temple.</figcaption>
-            </figure>
-            <figure>
-                <img src="https://via.placeholder.com/300x200" alt="Atlanta Temple">
-                <figcaption>The Atlanta Temple.</figcaption>
-            </figure>
-            <figure>
-                <img src="https://via.placeholder.com/300x200" alt="Happy Employee 1">
-                <figcaption>The Zambezi, below Victoria Falls, is a beast.
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="https://via.placeholder.com/300x200" alt="The Barranquilla Columblia Temple">
-                <figcaption>The Barranquilla Columblia Temple.
-                </figcaption>
-            </figure>
-            </figure>
-
+            <div class="grid-container">
+                <figure>
+                    <img src="images/aba-nigeria-temple-lds.jpg" alt="Aba Nigeria Temple">
+                    <figcaption>The Aba Nigeria Temple.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
+                    <figcaption>The Accra Ghana Temple.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/adelaide-australia-temple-lds.jpg" alt="Adelaide Australia Temple">
+                    <figcaption>The Adelaide Australia Temple.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/albuquerque-temple-lds.jpg" alt="Albuquerque Temple">
+                    <figcaption>The Albuquerque Temple.</figcaption>
+                </figure>
+                <figure>
+                    <img src=" " alt="Anchorage Temple">
+                    <figcaption>The Anchorage Temple.</figcaption>
+                </figure>
+                <figure>
+                    <img src=" " alt="Arequipa Peru Temple">
+                    <figcaption>The Arequipa Peru Temple.</figcaption>
+                </figure>
+                <figure>
+                    <img src=" " alt="Atlanta Temple">
+                    <figcaption>The Atlanta Temple.</figcaption>
+                </figure>
+                <figure>
+                    <img src=" " alt="Barranquilla Columblia Temple Interior">
+                    <figcaption>The Barranquilla Columblia Temple Interior.
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img src=" " alt="The Barranquilla Columblia Temple">
+                    <figcaption>The Barranquilla Columblia Temple.
+                    </figcaption>
+                </figure>
+                </figure>
+            </div>
         </section>
     </main>
 
     <footer>
         <p>
-            &copy; <span id="currentyear"></span> Oyegoke Cornelius Oyetunji 🌍 Nigeria.
+            &copy; <span id="currentyear"></span> Oyegoke Cornelius Oyetunji 🌍 Nigeria | Temple Albums
         </p>
         <p id="lastModified">Last Modified: </p>
     </footer>
