@@ -5,11 +5,13 @@
     --secondary-color: #ffffff;
     /* White */
     --text-color: #000;
-    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-bg-mobile: #ffffff;
+    /* Opaque white for mobile cards */
+    --card-bg-desktop: rgba(255, 255, 255, 0.9);
+    /* Semi-transparent white for desktop cards */
     --border-color: #eee;
-    --shadow-light: rgba(0, 0, 0, 0.15);
     --hero-overlay-dark: rgba(0, 0, 0, 0.3);
-    /* Dark overlay for hero image */
+    /* Dark overlay for hero image on desktop */
 }
 
 * {
@@ -40,7 +42,6 @@ p {
 
 .container {
     max-width: 960px;
-    /* Constrain max width for main content */
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -51,7 +52,6 @@ p {
     color: var(--secondary-color);
     padding: 20px;
     text-align: center;
-    box-shadow: 0 2px 5px var(--shadow-light);
 }
 
 .page-header h1 {
@@ -62,91 +62,53 @@ p {
 /* Main Content Area */
 .main-content {
     flex: 1;
-    /* Allows main content to grow and push footer down */
-    /* No direct padding here, hero section handles its own layout */
+    display: flex;
+    /* Use flex to stack hero and info-section vertically */
+    flex-direction: column;
+    gap: 20px;
+    /* Space between hero image and info section on mobile */
+    padding-bottom: 20px;
+    /* Padding above footer */
+    max-width: 960px;
+    /* Limit width */
+    margin: 0 auto;
+    /* Center main content */
 }
 
-/* Hero Section Container (holds image and overlaid content) */
-.hero-section-container {
-    position: relative;
-    /* Crucial for absolute positioning of children */
+/* Hero Image (Mobile View - a regular block image) */
+.hero-image-block {
     width: 100%;
-    min-height: 1000px;
-    /* Minimum height for the hero area on mobile */
     overflow: hidden;
-    /* Ensures image and content stay within bounds */
+    border-radius: 0 0 8px 8px;
+    /* Rounded bottom corners if desired */
 }
 
-/* The actual hero image within the HTML */
-.hero-main-image,
 .hero-image-actual {
     width: 100%;
-    height: 100%;
-    /* Fill the container height */
-    object-fit: cover;
-    /* Cover the container without distortion */
+    height: auto;
     display: block;
-    /* Remove extra space below img */
-    position: absolute;
-    /* Position the image within the container */
-    top: 0;
-    left: 0;
-    z-index: 1;
-    /* Ensure image is behind the cards */
+    object-fit: cover;
+    border-radius: 0 0 8px 8px;
+    /* Match parent border-radius */
 }
 
-/* Optional: Overlay on the image for better text readability */
-.hero-section-container::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--hero-overlay-dark);
-    /* Dark overlay */
-    z-index: 2;
-    /* Over the image, under the cards */
-}
-
-
-/* Info Section (Data and Weather Cards) - Positioned over the image */
+/* Info Section (Mobile View - below hero, stacked cards) */
 .info-section {
-    position: absolute;
-    /* Position relative to .hero-section-container */
-    top: 50%;
-    /* Start from vertical center */
-    left: 50%;
-    /* Start from horizontal center */
-    transform: translate(-50%, -50%);
-    /* Center perfectly */
-    z-index: 3;
-    /* Ensure cards are on top */
     display: flex;
     flex-direction: column;
-    /* Stack cards on mobile */
     gap: 20px;
-    /* Space between cards */
-    width: 90%;
-    /* Take up most of the width on mobile */
-    max-width: 400px;
-    /* Limit max width of card container on mobile */
-    align-items: center;
-    /* Center cards horizontally in the stack */
-    padding: 0;
-    /* Remove container padding as cards have their own */
+    padding-top: 0;
+    /* Remove top padding for info section, gap handles spacing */
+    padding-bottom: 0;
+    /* No bottom padding, main-content handles it */
 }
 
 .card {
-    background-color: var(--card-bg);
-    /* Use semi-transparent white */
+    background-color: var(--card-bg-mobile);
+    /* Opaque white for mobile */
     border-radius: 8px;
     padding: 20px;
-    box-shadow: 0 4px 10px var(--shadow-light);
-    /* Stronger shadow to pop out */
     border: 1px solid var(--border-color);
-    width: 100%;
-    /* Cards fill their info-section container */
 }
 
 .data-card h2,
@@ -175,14 +137,10 @@ p {
     text-align: center;
 }
 
-/* Styles for the SVG weather icon */
 .weather-icon-svg {
     width: 60px;
-    /* Adjust size as needed */
     height: 60px;
-    /* Adjust size as needed */
     margin: 0 auto 15px auto;
-    /* Center and add space below */
 }
 
 .weather-details p {
@@ -197,7 +155,6 @@ p {
     padding: 15px;
     text-align: center;
     margin-top: auto;
-    /* Push footer to the bottom */
     font-size: 0.9em;
 }
 
@@ -216,54 +173,91 @@ p {
         font-size: 3em;
     }
 
-    .hero-section-container {
-        min-height: 1000px;
-        /* Taller hero on desktop */
+    /* Redefine main-content to be a grid for desktop overlay */
+    .main-content {
+        display: grid;
+        grid-template-areas: "hero-area";
+        /* Define a single grid area */
+        padding: 0;
+        /* Remove padding from main-content, hero handles it */
+        position: relative;
+        overflow: hidden;
+        /* Hide anything that goes outside */
+        min-height: 600px;
+        /* Ensure enough height for the hero image and content */
+        align-items: center;
+        /* Vertically center content in grid */
+        justify-items: center;
+        /* Horizontally center content in grid */
     }
 
+    /* Position hero image to span the whole grid area */
+    .hero-image-block {
+        grid-area: hero-area;
+        width: 100%;
+        height: 100%;
+        /* Fill the grid area */
+        position: relative;
+        /* For pseudo-element overlay */
+        border-radius: 0;
+        /* Remove mobile-specific border-radius */
+        box-shadow: none;
+        /* Remove mobile-specific shadow */
+    }
+
+    .hero-image-actual {
+        height: 100%;
+        /* Ensure image fills its parent */
+        width: 100%;
+        object-fit: cover;
+        border-radius: 0;
+    }
+
+    /* Add a dark overlay on the hero image for readability on desktop */
+    .hero-image-block::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--hero-overlay-dark);
+        z-index: 2;
+        /* Over the image, under the cards */
+    }
+
+    /* Position info-section over the hero image */
     .info-section {
+        grid-area: hero-area;
+        /* Position in the same grid area as the hero image */
+        z-index: 3;
+        /* Ensure it's on top of the image and overlay */
         flex-direction: row;
         /* Layout cards side-by-side */
-        gap: 30px;
+        gap: 150px;
         /* More space between cards */
-        max-width: 800px;
-        /* Wider card container on desktop */
-        width: auto;
-        /* Let content determine width for better centering with max-width */
+        align-items: flex-start;
+        /* Align cards to the top within their row */
+        max-width: 900px;
+        /* Constrain info section width within hero */
+        padding: 40px;
+        /* Add padding around the cards themselves */
+        justify-content: center;
+        /* Center cards horizontally if space allows */
     }
 
-    .weather-heading {
-        position: relative;
-        display: inline-block;
-        /* To contain pseudo-element */
-        padding-right: 35px;
-        /* Space for the icon */
-    }
-
-    /* Pseudo-element for Weather Icon */
-    .weather-heading::after {
-        content: '⛅';
-        /* Unicode for sun behind cloud */
-        font-size: 1.5em;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        margin-left: 10px;
-        /* Space from text */
-    }
-
-    .weather-icon-svg {
-        display: none;
-    }
-
-    .data-card,
-    .weather-card {
+    .card {
+        background-color: var(--card-bg-desktop);
         flex: 1;
-        min-width: 350px;
+        /* Allow cards to take equal width */
+        min-width: 300px;
+        /* Ensure cards don't get too small on desktop */
+        max-width: 400px;
+        /* Prevent cards from getting too wide if only two */
     }
 
     .data-card {
         text-align: left;
+        /* Reset text alignment for data card */
     }
 }
