@@ -185,7 +185,6 @@ p {
         /* Hide anything that goes outside */
         min-height: 600px;
         /* Ensure enough height for the hero image and content */
-        max-width: 1500px;
         align-items: center;
         /* Vertically center content in grid */
         justify-items: center;
