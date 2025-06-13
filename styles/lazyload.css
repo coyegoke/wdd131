@@ -54,7 +54,7 @@ h1 {
     /* Animation properties */
     opacity: 0;
     /* Start invisible for the fade-in effect */
-    transition: opacity 2s ease-in-out;
+    transition: opacity 1s ease-in-out;
     /* Smooth transition for opacity */
 }
 
@@ -71,7 +71,7 @@ h1 {
 
 /* Class added by JavaScript when image is loaded */
 .lazy-image.loaded {
-    animation: fadeIn 5s forwards;
+    animation: fadeIn 4s forwards;
     /* Apply animation once loaded */
     opacity: 1;
     /* Ensure final state is visible */
