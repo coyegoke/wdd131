@@ -1,17 +1,17 @@
 /* Basic Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Lato', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #fff;
+    color: #000;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
 header {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
     padding: 20px 0;
     text-align: center;
@@ -33,16 +33,14 @@ h1 {
     align-items: center;
     /* Center images horizontally */
     padding: 20px 15px;
-    gap: 30px;
+    gap: 40px;
     /* Space between images */
 }
 
 /* Image Styling */
 .lazy-image {
     width: 400px;
-    /* Fixed width */
     height: 600px;
-    /* Minimum height, can be more if image aspect ratio allows */
     object-fit: cover;
     /* Ensures images cover the dimensions without distortion */
     border: 1px solid #ddd;
@@ -56,7 +54,7 @@ h1 {
     /* Animation properties */
     opacity: 0;
     /* Start invisible for the fade-in effect */
-    transition: opacity 1s ease-in-out;
+    transition: opacity 2s ease-in-out;
     /* Smooth transition for opacity */
 }
 
@@ -73,7 +71,7 @@ h1 {
 
 /* Class added by JavaScript when image is loaded */
 .lazy-image.loaded {
-    animation: fadeIn 1s forwards;
+    animation: fadeIn 5s forwards;
     /* Apply animation once loaded */
     opacity: 1;
     /* Ensure final state is visible */
@@ -81,9 +79,9 @@ h1 {
 
 /* Footer */
 footer {
-    background-color: #333;
+    background-color: #000;
     color: #fff;
-    padding: 15px 0;
+    padding: 20px 0;
     text-align: center;
     font-size: 0.9em;
     margin-top: auto;
