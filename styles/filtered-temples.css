@@ -1,0 +1,246 @@
+/* filtered-temples.css - Mobile First Styles */
+
+:root {
+    --header-bg: #000;
+    --header-text: #fff;
+    --main-bg: #fdfdfd;
+    --card-bg: #fff;
+    --text-color: #000;
+    --link-color: #bbdefb;
+    /* Light Blue for links on header */
+    --link-hover: #e0e0e0;
+    --footer-text: #fff;
+    --border-color: #ddd;
+    --primary-color: #000;
+    /* Defined for the page title in main */
+    --secondary-color: #000;
+    /* For figcaption */
+}
+
+/* Basic Resets and Body Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--main-bg);
+}
+
+.container {
+    max-width: 960px;
+    /* Limited width for main content */
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Removes extra space below images */
+}
+
+a {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+/* Header Styles */
+.site-header {
+    background-color: var(--header-bg);
+    color: var(--header-text);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    /* Allows content to wrap on smaller screens */
+}
+
+.site-title {
+    font-size: 1.8em;
+    margin: 0;
+    flex-grow: 1;
+    /* Allows title to take up available space */
+}
+
+/* Navigation Styles (Mobile First) */
+.main-nav {
+    position: relative;
+    /* For hamburger menu positioning */
+}
+
+.main-nav .nav-links {
+    list-style: none;
+    display: none;
+    /* Hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--header-bg);
+    position: absolute;
+    top: 100%;
+    /* Position below the header */
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav .nav-links.active {
+    display: flex;
+    /* Show when active (hamburger clicked) */
+}
+
+.main-nav .nav-links li {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav .nav-links li:last-child {
+    border-bottom: none;
+}
+
+.main-nav .nav-links a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--header-text);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .nav-links a:hover,
+.main-nav .nav-links a.current {
+    /* Use .current class for active filter */
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+/* Hamburger Menu Icon */
+.hamburger-menu {
+    display: block;
+    /* Show hamburger on mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 20;
+    /* Ensure it's above nav-links */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--header-text);
+    margin: 5px 0;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+/* Hamburger animation for 'X' effect */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* Main Content */
+.main-content {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.page-title {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+}
+
+/* Image Grid (Mobile: Single Column) */
+.image-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column on mobile */
+    gap: 20px;
+    justify-items: center;
+    /* Center figures in the grid */
+}
+
+figure {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    /* Take full width of its grid cell */
+    max-width: 300px;
+    /* Limit max width for readability */
+    overflow: hidden;
+}
+
+figure img {
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+figure img:hover {
+    transform: scale(1.05);
+    /* Zoom effect on hover */
+}
+
+figcaption {
+    font-size: 0.9em;
+    color: var(--secondary-color);
+    padding: 5px 0;
+    text-align: left;
+    /* Align text to left for detailed info */
+}
+
+figcaption strong {
+    display: block;
+    /* Make headings bold and on new lines */
+    font-size: 1em;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+figcaption p {
+    margin-bottom: 3px;
+    font-size: 0.85em;
+}
+
+
+/* Footer Styles */
+.site-footer {
+    background-color: var(--header-bg);
+    color: var(--footer-text);
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+.footer-info p {
+    margin-bottom: 5px;
+}
+
+.footer-info p:last-child {
+    margin-bottom: 0;
+}

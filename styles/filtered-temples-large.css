@@ -1,0 +1,92 @@
+/* filtered-temples-large.css - Styles for Larger Views */
+
+@media (min-width: 768px) {
+
+    /* Header & Navigation */
+    .site-title {
+        font-size: 2.5em;
+    }
+
+    .main-nav .nav-links {
+        display: flex;
+        /* Always show nav links on desktop */
+        flex-direction: row;
+        position: static;
+        /* Remove absolute positioning */
+        width: auto;
+        background-color: transparent;
+        /* No background */
+        box-shadow: none;
+        /* No shadow */
+        border-top: none;
+        /* No border */
+    }
+
+    .main-nav .nav-links li {
+        margin-left: 25px;
+        /* Spacing between links */
+        border-bottom: none;
+        /* Remove border between links */
+    }
+
+    .main-nav .nav-links a {
+        padding: 5px 0;
+        /* Adjust padding for horizontal nav */
+        background-color: transparent;
+        /* No background */
+        color: var(--header-text);
+        /* Ensure text color is white */
+    }
+
+    .main-nav .nav-links a:hover,
+    .main-nav .nav-links a.current {
+        /* Use .current class for active filter */
+        background-color: transparent;
+        text-decoration: underline;
+        /* Underline on hover for desktop */
+    }
+
+    .hamburger-menu {
+        display: none;
+        /* Hide hamburger on desktop */
+    }
+
+    /* Main Content Grid */
+    .image-grid {
+        grid-template-columns: repeat(3, 1fr);
+        /* 3 columns on larger screens */
+        gap: 25px;
+        /* Adjust gap */
+    }
+
+    figure {
+        max-width: none;
+        /* Remove max-width constraint for larger screens */
+    }
+}
+
+/* You can add more breakpoints for even larger screens if necessary */
+@media (min-width: 1024px) {
+    .container {
+        padding: 0 0;
+        /* Remove padding if container max-width is reached */
+    }
+}
+
+/* Larger View (Desktop) */
+.grid-container {
+    grid-template-columns: repeat(3, 1fr);
+    /* Desktop: 3 columns */
+}
+
+/* Hide hamburger menu in desktop view */
+#menuToggle {
+    display: none;
+}
+
+/* Show navigation in desktop view */
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
