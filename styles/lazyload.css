@@ -1,0 +1,95 @@
+/* Basic Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+/* Main gallery container */
+.image-gallery {
+    flex: 1;
+    /* Allows main to grow and push footer down */
+    display: flex;
+    flex-direction: column;
+    /* Images in one column */
+    align-items: center;
+    /* Center images horizontally */
+    padding: 20px 15px;
+    gap: 30px;
+    /* Space between images */
+}
+
+/* Image Styling */
+.lazy-image {
+    width: 400px;
+    /* Fixed width */
+    height: 600px;
+    /* Minimum height, can be more if image aspect ratio allows */
+    object-fit: cover;
+    /* Ensures images cover the dimensions without distortion */
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    display: block;
+    /* Ensures each image takes its own line and respects margins */
+    max-width: 90%;
+    /* Responsive: ensures image doesn't overflow on smaller screens */
+
+    /* Animation properties */
+    opacity: 0;
+    /* Start invisible for the fade-in effect */
+    transition: opacity 1s ease-in-out;
+    /* Smooth transition for opacity */
+}
+
+/* Keyframe for the fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Class added by JavaScript when image is loaded */
+.lazy-image.loaded {
+    animation: fadeIn 1s forwards;
+    /* Apply animation once loaded */
+    opacity: 1;
+    /* Ensure final state is visible */
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+    /* Push footer to the bottom */
+}
+
+footer p {
+    margin: 5px 0;
+}
