@@ -1,20 +1,15 @@
 /* filtered-temples.css - Mobile First Styles */
 
 :root {
-    --header-bg: #000;
+    --header-bg: #333;
     --header-text: #fff;
     --main-bg: #fdfdfd;
-    --card-bg: #fff;
     --text-color: #000;
     --link-color: #bbdefb;
     /* Light Blue for links on header */
     --link-hover: #e0e0e0;
-    --footer-text: #fff;
     --border-color: #ddd;
-    --primary-color: #000;
     /* Defined for the page title in main */
-    --secondary-color: #000;
-    /* For figcaption */
 }
 
 /* Basic Resets and Body Styles */
@@ -25,7 +20,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: "Ubuntu", sans-serif;
     line-height: 1.6;
     color: var(--text-color);
     background-color: var(--main-bg);
@@ -168,7 +163,7 @@ a {
 .page-title {
     font-size: 2.2em;
     margin-bottom: 30px;
-    color: var(--primary-color);
+    color: var(--text-color);
 }
 
 /* Image Grid (Mobile: Single Column) */
@@ -182,7 +177,7 @@ a {
 }
 
 figure {
-    background-color: var(--card-bg);
+    background-color: var(--header-text);
     border: 1px solid var(--border-color);
     border-radius: 8px;
     padding: 10px;
@@ -197,7 +192,7 @@ figure {
 figure img {
     border-radius: 5px;
     margin-bottom: 10px;
-    transition: transform 0.3s ease;
+    transition: transform 0.5s ease;
 }
 
 figure img:hover {
@@ -207,7 +202,7 @@ figure img:hover {
 
 figcaption {
     font-size: 0.9em;
-    color: var(--secondary-color);
+    color: var(--text-color);
     padding: 5px 0;
     text-align: left;
     /* Align text to left for detailed info */
@@ -230,7 +225,7 @@ figcaption p {
 /* Footer Styles */
 .site-footer {
     background-color: var(--header-bg);
-    color: var(--footer-text);
+    color: var(--header-text);
     padding: 20px 0;
     text-align: center;
     margin-top: 30px;

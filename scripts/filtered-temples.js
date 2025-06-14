@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
            dedicated: "1985, August, 24-25",
            area: 19184,
            imageUrl:
-               "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22475-main.jpg"
+               "https://churchofjesuschristtemples.org/assets/img/temples/johannesburg-south-africa-temple/johannesburg-south-africa-temple-22479-thumb.jpg"
         },
        {
            templeName: "Accra Ghana",

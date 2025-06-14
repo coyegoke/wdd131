@@ -14,12 +14,7 @@
         position: static;
         /* Remove absolute positioning */
         width: auto;
-        background-color: transparent;
-        /* No background */
         box-shadow: none;
-        /* No shadow */
-        border-top: none;
-        /* No border */
     }
 
     .main-nav .nav-links li {
@@ -32,10 +27,6 @@
     .main-nav .nav-links a {
         padding: 5px 0;
         /* Adjust padding for horizontal nav */
-        background-color: transparent;
-        /* No background */
-        color: var(--header-text);
-        /* Ensure text color is white */
     }
 
     .main-nav .nav-links a:hover,
