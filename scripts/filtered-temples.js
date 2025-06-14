@@ -124,7 +124,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Initial display of all temples on page load
-    displayTemples(temples, "Home");
+    displayTemples(temples, "Temple Album");
 
     // Event listener for navigation links
     navLinks.forEach(link => {
