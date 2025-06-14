@@ -74,12 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
               "https://churchofjesuschristtemples.org/assets/img/temples/accra-ghana-temple/accra-ghana-temple-13760-main.jpg"
         },
        {
-          templeName: "Nairobi Kenya",
-          location: "Nairobi, Kenya",
-          dedicated: "2025, May, 18",
-          area: 19870,
+          templeName: "Toronto Ontario",
+          location: "Toronto, Ontario",
+          dedicated: "1990, August, 25-27",
+          area: 55558,
           imageUrl:
-              "https://churchofjesuschristtemples.org/assets/img/temples/nairobi-kenya-temple/nairobi-kenya-temple-60488-main.jpg"
+              "https://churchofjesuschristtemples.org/assets/img/temples/toronto-ontario-temple/toronto-ontario-temple-57469-main.jpg"
         },
     ];
 
