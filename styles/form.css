@@ -1,0 +1,389 @@
+/* Basic Reset and Body Styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    /* Using Inter font */
+    background-color: #fff;
+    /* White background */
+    color: #000;
+    /* Black text */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensure footer stays at bottom */
+}
+
+/* Header Styling */
+header {
+    background-color: #f0f0f0;
+    /* Light gray background for header */
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    color: #333;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+/* Main Container and Form Styling */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    /* Allows main content to expand */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    /* Space between form sections */
+}
+
+.form-section {
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    /* Slightly rounded sections */
+    background-color: #f9f9f9;
+}
+
+.form-section label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+    font-size: 1rem;
+}
+
+/* Input and Select Styling */
+input[type="text"],
+input[type="date"],
+textarea,
+select {
+    width: calc(100% - 20px);
+    /* Account for padding */
+    padding: 0.75rem 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    /* Rounded input fields */
+    font-size: 1rem;
+    box-sizing: border-box;
+    /* Include padding in width */
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #66b3ff;
+    /* Focus highlight */
+    outline: none;
+    box-shadow: 0 0 5px rgba(102, 179, 255, 0.5);
+}
+
+textarea {
+    resize: vertical;
+    /* Allow vertical resizing */
+}
+
+/* Specific styles for Product Name select */
+select {
+    appearance: none;
+    /* Remove default dropdown arrow */
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%204%205%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M2%200L0%202h4zm0%205L0%203h4z%22%2F%3E%3C%2Fsvg%3E');
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+/* Star Rating Styling (using provided CSS structure) */
+.star-rating {
+    display: flex;
+    align-items: center;
+    width: 160px;
+    /* Adjust as needed for responsiveness */
+    flex-direction: row-reverse;
+    /* Important for the :checked ~ label selector */
+    justify-content: space-between;
+    margin: 10px auto 0 auto;
+    /* Adjusted margin to fit form layout */
+    position: relative;
+    /* Maintain form color scheme */
+    color: #ffd700;
+    /* Default star color (gold) - adjusted from orange for better theme fit */
+}
+
+.star-rating input {
+    display: none;
+    /* Hide the actual radio inputs */
+}
+
+.star-rating>label {
+    width: 30px;
+    height: 30px;
+    font-family: Arial;
+    font-size: 30px;
+    transition: 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+    /* Center the star within its label area */
+}
+
+.star-rating label:hover {
+    color: #ffb3e0;
+    /* Lighter pink on hover - adjusted from hotpink */
+    transition: 0.2s ease;
+}
+
+/* For better accessibility, outline on focus-visible */
+.star-rating input:focus-visible+label {
+    outline: 2px solid #66b3ff;
+    outline-offset: 2px;
+}
+
+.star-rating label:active::before {
+    transform: scale(1.1);
+}
+
+/* Set shape of unselected label */
+.star-rating label::before {
+    content: '\2606';
+    /* Empty star */
+    position: absolute;
+    top: 0px;
+    /* Adjusted if needed for vertical alignment */
+    line-height: 26px;
+    /* Adjusted if needed for vertical alignment */
+    /* Position relative to the .star-rating container, but need to consider label positioning */
+    /* This absolute positioning might need adjustment based on final layout */
+    /* Better approach: position relative to label and use flexbox or grid for labels */
+}
+
+/* Set full star shape for checked label and those that come after it (due to row-reverse) */
+.star-rating input:checked~label::before {
+    content: '\2605';
+    /* Full star */
+    color: #ffd700;
+    /* Gold color for filled stars */
+}
+
+/* Ensure only stars up to the checked one are filled (due to flex-direction: row-reverse) */
+.star-rating input:checked~label {
+    color: #ffd700;
+    /* Apply gold color to the label itself for hover effects */
+}
+
+/* Firefox specific adjustments */
+@-moz-document url-prefix() {
+    .star-rating input:checked~label::before {
+        font-size: 36px;
+        line-height: 21px;
+    }
+}
+
+/* Useful Features (Checkboxes) */
+.features-fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+.features-fieldset legend {
+    font-weight: 600;
+    color: #333;
+    padding: 0 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: 20px;
+    /* Standard size */
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    appearance: none;
+    background-color: #fff;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    flex-shrink: 0;
+    /* Prevent checkbox from shrinking */
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+    background-color: #4CAF50;
+    /* Green check */
+    border-color: #4CAF50;
+    position: relative;
+}
+
+/* Custom checkmark for checkboxes */
+.checkbox-group input[type="checkbox"]:checked::before {
+    content: '\2713';
+    /* Checkmark Unicode */
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.checkbox-group label {
+    margin-bottom: 0;
+    /* Override default label margin */
+    cursor: pointer;
+    font-weight: 400;
+    /* Standard text weight */
+}
+
+/* Submission Button */
+.button-section {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    /* Same background as sections */
+    border-radius: 8px;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #4CAF50;
+    /* Green */
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    /* Rounded button */
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    width: auto;
+    /* Allow button to size based on content */
+    max-width: 100%;
+    /* Ensure responsiveness */
+}
+
+.submit-button:hover {
+    background-color: #45a049;
+    /* Darker green on hover */
+    transform: translateY(-2px);
+    /* Slight lift effect */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.submit-button:active {
+    transform: translateY(0);
+    /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer Styling */
+footer {
+    background-color: #333;
+    /* Dark background for footer */
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+    border-top: 1px solid #444;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 600px) {
+    .container {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .form-section {
+        padding: 0.75rem;
+    }
+
+    .form-section label,
+    .features-fieldset legend {
+        font-size: 0.95rem;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    textarea,
+    select {
+        padding: 0.6rem 0.4rem;
+        font-size: 0.9rem;
+    }
+
+    .star-rating {
+        width: 140px;
+        /* Smaller width for mobile stars */
+    }
+
+    .star-rating>label {
+        font-size: 25px;
+        /* Smaller stars */
+        width: 25px;
+        height: 25px;
+    }
+
+    .star-rating label::before {
+        line-height: 21px;
+        /* Adjust line height for smaller stars */
+    }
+
+    .checkbox-group label {
+        font-size: 0.9rem;
+    }
+
+    .submit-button {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .star-rating {
+        width: 100%;
+        /* Full width for very small screens */
+        justify-content: space-around;
+        margin: 10px 0 0 0;
+    }
+
+    .star-rating>label {
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    }
+
+    .star-rating label::before {
+        line-height: 18px;
+    }
+}

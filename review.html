@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Thank You for Your Review!</h1>
+    </header>
+
+    <main class="container confirmation-page">
+        <p>Your feedback is greatly appreciated.</p>
+        <p>You have completed <span id="reviewCount">0</span> reviews so far!</p>
+        <p><a href="form.html" class="back-link">Submit another review</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentYear"></span> Rubia Magdelena Francesco</p>
+        <p>Madagascar</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve and update review count from localStorage
+            let reviewCount = localStorage.getItem('reviewCount');
+            reviewCount = reviewCount ? parseInt(reviewCount) + 1 : 1; // Increment or start at 1
+            localStorage.setItem('reviewCount', reviewCount);
+
+            const reviewCountSpan = document.getElementById('reviewCount');
+            if (reviewCountSpan) {
+                reviewCountSpan.textContent = reviewCount;
+            }
+
+            // Set last modification date
+            setLastModified();
+
+            // Set current year in footer
+            setCurrentYear();
+        });
+
+        /**
+         * Sets the last modified date in the footer.
+         */
+        function setLastModified() {
+            const lastModifiedSpan = document.getElementById('lastModified');
+            if (lastModifiedSpan) {
+                const date = new Date(document.lastModified);
+                const options = {
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                };
+                lastModifiedSpan.textContent = date.toLocaleString('en-US', options);
+            }
+        }
+
+        /**
+         * Sets the current year in the footer.
+         */
+        function setCurrentYear() {
+            const currentYearSpan = document.getElementById('currentYear');
+            if (currentYearSpan) {
+                currentYearSpan.textContent = new Date().getFullYear();
+            }
+        }
+    </script>
+</body>
+
+</html>
