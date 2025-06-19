@@ -6,9 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const footerContent = `
         <div class="social-icons">
-            <a href="#" aria-label="Facebook"><img src="https://via.placeholder.com/24/fff/000?text=F" alt="Facebook"></a>
-            <a href="#" aria-label="Twitter"><img src="https://via.placeholder.com/24/fff/000?text=T" alt="Twitter"></a>
-            <a href="#" aria-label="Instagram"><img src="https://via.placeholder.com/24/fff/000?text=I" alt="Instagram"></a>
+            <a href="https://facebook.com" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+            <a href="https://https://x.com/" aria-label="Twitter"><img src="images/twitter-x.svg" alt="Twitter"></a>
+            <a href="https://linkedin.com" aria-label="LinkedIn"><img src="images/linkedin.svg" alt="LinkedIn"></a>
+            <a href="https://whatsapp.com" aria-label="WhatsApp"><img src="images/whatsapp.svg" alt="WhatsApp"></a>
         </div>
         <p>&copy; ${copyrightYear} ${bookstoreName}. All rights reserved.</p>
         <p>Student: ${studentName}</p>
