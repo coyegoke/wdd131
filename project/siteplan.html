@@ -12,94 +12,250 @@
 </head>
 
 <body>
+
     <header class="site-header">
-        <div class="container header-content">
-            <div class="logo">
-                <img src="images/bookstore-logo.png" alt="Independent Bookstore Logo">
-                <span class="site-name">INDEPENDENT BOOKSTORE</span>
+        <div class="container">
+            <div class="site-branding">
+                <img src="images/bookstore-logo.jpg" alt="Independent Bookstore Logo" class="site-logo">
+                <h1 class="site-name">Independent Bookstore</h1>
             </div>
             <nav class="main-nav">
-                <button class="hamburger-menu" aria-label="Toggle navigation">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </button>
-                <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link current">Homepage</a></li>
-                    <li><a href="about.html" class="nav-link">About Us</a></li>
-                    <li><a href="collection.html" class="nav-link">Collection</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                <button class="nav-toggle" aria-expanded="false" aria-controls="main-menu">
+                    <span class="sr-only">Toggle navigation</span>
+                    &#9776; </button>
+                <ul id="main-menu" class="nav-menu">
+                    <li><a href="#homepage">Home</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#our-collections">Our Collections</a></li>
+                    <li><a href="#contact-location">Contact & Location</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="main-content">
-        <section class="hero-section">
-            <div class="container hero-container">
-                <div class="hero-text-content">
-                    <h2>Discover Your Next Favorite Book</h2>
-                    <p>Explore a world of stories, knowledge, and imagination.</p>
-                </div>
-                <div class="search-box">
-                    <input type="text" placeholder="Search for books...">
-                    <button>Search</button>
-                </div>
-                <div class="background-image-placeholder">
-                    <p class="image-description">Cozy Bookstore Image</p>
-                </div>
+    <main>
+        <section id="site-purpose" class="site-section">
+            <div class="container">
+                <h2>Site Purpose</h2>
+                <p>The Independent Bookstore website is designed to encourage reading, foster community engagement, and
+                    create a welcoming space for intellectual exchange. We aim to connect readers with diverse literary
+                    works and provide a platform for meaningful discussions and shared experiences.</p>
             </div>
         </section>
 
-        <section class="store-info-sections">
+        <section id="homepage" class="site-section">
             <div class="container">
-                <div class="store-image-placeholder">
-                    <h3>Store Image</h3>
-                </div>
-                <div class="new-arrivals-section">
-                    <h3>New Arrivals</h3>
-                    <div class="arrivals-grid">
-                        <div class="arrival-item">Book Title 1</div>
-                        <div class="arrival-item">Book Title 2</div>
-                        <div class="arrival-item">Book Title 3</div>
+                <h2>Homepage</h2>
+                <p>The homepage will serve as the gateway to the Independent Bookstore, featuring engaging content to
+                    immediately capture visitor interest.</p>
+                <h3>Content:</h3>
+                <ul>
+                    <li><strong>Featured New Arrivals:</strong> A prominent display of the latest additions to our
+                        collection, highlighting cover art and brief descriptions.</li>
+                    <li><strong>Scenarios (FAQs):</strong> Answers to common questions, helping new visitors navigate
+                        the site and understand our offerings.</li>
+                    <li><strong>Cozy Image of the Bookstore:</strong> A high-quality, inviting image to convey the warm
+                        and welcoming atmosphere of our physical space.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="about-us" class="site-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>This section tells the unique story behind the Independent Bookstore, building a personal connection
+                    with our visitors.</p>
+                <h3>Content:</h3>
+                <ul>
+                    <li><strong>The Story of the Bookstore:</strong> A narrative detailing our journey, inspiration, and
+                        growth.</li>
+                    <li><strong>Its Philosophy:</strong> Our core values, mission, and what sets us apart from other
+                        bookstores.</li>
+                    <li><strong>Brief Bio of the Owner:</strong> A short introduction to the person behind the vision,
+                        adding a human touch.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="our-collections" class="site-section">
+            <div class="container">
+                <h2>Our Collections</h2>
+                <p>A comprehensive guide to the literary treasures available at Independent Bookstore, designed for easy
+                    Browse and discovery.</p>
+                <h3>Content:</h3>
+                <ul>
+                    <li><strong>Categorized Lists of Genres:</strong> Organized sections for fiction, non-fiction,
+                        poetry, children's books, etc., making it easy for readers to find their preferred categories.
+                    </li>
+                    <li><strong>Monthly Book Recommendations:</strong> Curated lists of must-reads, handpicked by our
+                        staff, offering personalized suggestions and encouraging exploration.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact-location" class="site-section">
+            <div class="container">
+                <h2>Contact & Location</h2>
+                <p>All the necessary information for visitors to get in touch with us and find our physical location.
+                </p>
+                <h3>Content:</h3>
+                <ul>
+                    <li><strong>Store Hours:</strong> Clearly listed operating hours for visitors planning a visit.</li>
+                    <li><strong>Address:</strong> Our complete street address for easy navigation.</li>
+                    <li><strong>Map:</strong> An embedded interactive map (e.g., Google Maps placeholder) for visual
+                        directions.</li>
+                    <li><strong>Signup Form:</strong> A form for visitors to subscribe to newsletters, events, or
+                        updates.</li>
+                    <li><strong>Comment Section:</strong> A space for visitors to leave feedback, questions, or
+                        comments.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="site-plan-details" class="site-section site-plan-section">
+            <div class="container">
+                <h2>Site Plan Details</h2>
+
+                <section class="site-plan-sub-section">
+                    <h3>Site Name & Branding</h3>
+                    <p><strong>Site Name:</strong> Independent Bookstore</p>
+                    <p>The site name, along with a distinctive logo, is paramount for establishing brand identity,
+                        enhancing online visibility, and ensuring easy recognition among target audiences. It serves as
+                        the primary identifier for our digital presence.</p>
+                    <div class="image-placeholder branding-placeholder">
+                        <p>Logo Placeholder</p>
+                        <img src="images/wireframe-bookstore-logo.png" alt="Placeholder for Independent Bookstore Logo">
                     </div>
-                </div>
-                <div class="scenario-section">
-                    <h3>Common Scenarios / FAQs</h3>
-                    <div class="scenario-questions">
-                        <div class="question-item">
-                            <h4>"How can I quickly find out what new books have just arrived at the bookstore?"</h4>
-                            <p>You can find our latest additions in the "New Arrivals" section on this homepage. We
-                                update it regularly!</p>
+                </section>
+
+                <section class="site-plan-sub-section">
+                    <h3>Scenarios (FAQs)</h3>
+                    <p>Scenarios represent common questions from our target audience, driving the creation of relevant
+                        and helpful website content. Addressing these questions directly enhances user experience and
+                        fulfills visitor needs.</p>
+                    <ol>
+                        <li>
+                            <h4>Scenario 1: New Reader Looking for Recommendations</h4>
+                            <p><strong>Question:</strong> "I'm new to reading and looking for suggestions. Where should
+                                I start, and do you offer personalized recommendations?"</p>
+                            <p><strong>Answer on Site:</strong> The "Our Collections" section will feature "Monthly Book
+                                Recommendations" curated by our staff. The "Contact & Location" section will include a
+                                comment form where visitors can ask for personalized suggestions, or they can visit us
+                                in-store for a chat with our booksellers.</p>
+                        </li>
+                        <li>
+                            <h4>Scenario 2: Community Member Interested in Events</h4>
+                            <p><strong>Question:</strong> "Does the bookstore host any events like book clubs or author
+                                readings? How can I stay updated?"</p>
+                            <p><strong>Answer on Site:</strong> While not explicitly listed as a menu item yet, event
+                                information would be prominently displayed on the "Homepage" (e.g., in a dedicated
+                                "Upcoming Events" section). The "Contact & Location" page features a "Signup Form" for
+                                our newsletter, which will include updates on all community events, book clubs, and
+                                author appearances.</p>
+                        </li>
+                    </ol>
+                </section>
+
+                <section class="site-plan-sub-section">
+                    <h3>Color Schema</h3>
+                    <p>The chosen color schema aims to create a cohesive, inviting, and professional aesthetic for the
+                        website, ensuring readability and visual appeal.</p>
+                    <ul>
+                        <li><strong>Header Background:</strong> White (#FFFFFF) - Provides a clean and crisp
+                            background for the logo and navigation, signifying clarity and professionalism.</li>
+                        <li><strong>Body Background:</strong> White (#FFFFFF) - Maintains a bright and open feel
+                            throughout the content sections, enhancing readability.</li>
+                        <li><strong>Text Color:</strong> Black (#000000) - Used for all primary text content
+                            (headings, paragraphs) to ensure maximum contrast and legibility against white backgrounds.
+                        </li>
+                        <li><strong>Button Background:</strong> Deep Blue (#000083) - A strong, trustworthy color for
+                            interactive elements like buttons and calls to action, drawing user attention effectively.
+                        </li>
+                        <li><strong>Footer Background:</strong> Very Dark Blue (#18263D) - Creates a solid, professional
+                            base at the bottom of the page, providing a sense of completion.</li>
+                        <li><strong>Footer Text Color:</strong> White (#FFFFFF) - Ensures high readability for text
+                            elements within the deep blue footer.</li>
+                    </ul>
+                    <div class="color-swatches">
+                        <div class="color-swatch" style="background-color: #FFFFFF; border: 1px solid #ccc;">
+                            <p>#FFFFFF (White)</p>
                         </div>
-                        <div class="question-item">
-                            <h4>"I'm looking for a specific genre, and also want staff recommendations. Where can I find
-                                these?"</h4>
-                            <p>Visit our "Collection" page for categorized genres. For staff picks, check out the
-                                dedicated section on the Collection page, updated monthly!</p>
+                        <div class="color-swatch" style="background-color: #000000; color: white;">
+                            <p>#000000 (Black)</p>
                         </div>
-                        <div class="question-item">
-                            <h4>"What are your store hours and how can I sign up for updates?"</h4>
-                            <p>All our store hours, address, and a map are available on the "Contact & Location" page.
-                                There, you'll also find a signup form for our newsletter.</p>
+                        <div class="color-swatch" style="background-color: #18263D; color: white;">
+                            <p>#18263D (Very Dark Blue)</p>
                         </div>
                     </div>
-                </div>
+                </section>
+
+                <section class="site-plan-sub-section">
+                    <h3>Typography</h3>
+                    <p>Typography is carefully selected to enhance readability and establish the website's tone,
+                        ensuring a harmonious visual experience.</p>
+                    <ul>
+                        <li><strong>Headings (H1, H2, H3, etc.):</strong> 'Merriweather', serif - Chosen for its
+                            classic, readable, and slightly elegant feel, perfect for conveying the intellectual and
+                            cozy atmosphere of a bookstore.</li>
+                        <li><strong>Body Text (Paragraphs, List Items, Labels):</strong> 'Open Sans', sans-serif - A
+                            highly legible and versatile sans-serif font, ideal for long-form content and ensuring
+                            comfort for the reader across various devices.</li>
+                    </ul>
+                    <div class="font-examples">
+                        <p style="font-family: 'Merriweather', serif; font-size: 1.5em; font-weight: bold;">Example
+                            Heading: The Joy of Reading</p>
+                        <p style="font-family: 'Open Sans', sans-serif; font-size: 1em;">Example Body Text: Explore our
+                            curated collection of books, handpicked to inspire and delight every reader.</p>
+                    </div>
+                </section>
+
+                <section class="site-plan-sub-section">
+                    <h3>Wireframe: Homepage Layout (Mobile First)</h3>
+                    <p>This wireframe illustrates the intended layout of the homepage, prioritizing content flow and
+                        user experience on smaller screens first.</p>
+                    <div class="image-placeholder wireframe-placeholder">
+                        <p>Mobile Homepage Wireframe Placeholder</p>
+                        <img src="images/wireframe-homepage-mobile.png" alt="Placeholder for Mobile Homepage Wireframe">
+                        <p>Description: Simple header with logo and toggle menu. Main content area with "New Arrivals"
+                            section, followed by FAQs. A large, inviting image of the bookstore below. Footer at the
+                            bottom.</p>
+                    </div>
+                    <div class="image-placeholder wireframe-placeholder">
+                        <p>Desktop Homepage Wireframe Placeholder</p>
+                        <img src="images/wireframe-homepage-desktop.png"
+                            alt="Placeholder for Desktop Homepage Wireframe">
+                        <p>Description: Wider layout. Header with logo and full navigation bar. Main content with a
+                            prominent hero section for new arrivals and a large bookstore image. FAQs below. Footer
+                            spanning full width.</p>
+                    </div>
+                </section>
+
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-content">
-            <p>&copy; <span id="currentYear"></span> Independent Bookstore. Oyegoke Cornelius Oyetunji</p>
-            <p>Last edited: <span id="lastModified">MM/DD/YYYY</span></p>
-            <div class="social-icons">
-                <a href="#" aria-label="Facebook"><img src="images/icon-facebook.png" alt="Facebook"></a>
-                <a href="#" aria-label="LinkedIn"><img src="images/icon-linkedin.png" alt="LinkedIn"></a>
-                <a href="#" aria-label="WhatsApp"><img src="images/icon-whatsapp.png" alt="WhatsApp"></a>
-            </div>
+        <div class="container">
+            <p>&copy; 2025 Independent Bookstore. All rights reserved.</p>
+            <p>Oyegoke Cornelius Oyetunji.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.querySelector('.nav-toggle');
+            const navMenu = document.getElementById('main-menu');
+
+            if (navToggle && navMenu) {
+                navToggle.addEventListener('click', () => {
+                    const expanded = navToggle.getAttribute('aria-expanded') === 'true' || false;
+                    navToggle.setAttribute('aria-expanded', !expanded);
+                    navMenu.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+
 </body>
 
 </html>
