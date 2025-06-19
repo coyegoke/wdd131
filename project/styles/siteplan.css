@@ -1,0 +1,525 @@
+/* General Variables */
+:root {
+    --primary-color: #4a148c;
+    /* Deep Purple for header, accents */
+    --secondary-color: #f5f5f5;
+    /* Light Gray for main background */
+    --text-color: #333;
+    --light-text-color: #fff;
+    --card-bg: #fff;
+    --border-color: #ddd;
+    --accent-color: #bbdefb;
+    /* Light Blue for links/buttons */
+    --font-heading: 'Georgia', serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+/* Basic Resets & Body */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* Ensures footer stays at bottom */
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: 0.8em;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo img {
+    width: 40px;
+    /* Adjust logo size */
+    height: auto;
+}
+
+.site-name {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+/* Navigation (Mobile-First - Hamburger Menu) */
+.main-nav {
+    position: relative;
+    flex-grow: 1;
+    /* Allows nav to take available space */
+    text-align: right;
+    /* Align hamburger to right */
+}
+
+.main-nav .nav-links {
+    list-style: none;
+    display: none;
+    /* Hidden by default on mobile */
+    flex-direction: column;
+    width: 100%;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav .nav-links.active {
+    display: flex;
+    /* Show when active */
+}
+
+.main-nav .nav-links li {
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.main-nav .nav-links li:last-child {
+    border-bottom: none;
+}
+
+.main-nav .nav-links a {
+    display: block;
+    padding: 15px 20px;
+    color: var(--light-text-color);
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav .nav-links a:hover,
+.main-nav .nav-links a.current {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+
+.hamburger-menu {
+    display: block;
+    /* Show on mobile */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 20;
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: var(--light-text-color);
+    margin: 5px 0;
+    transition: 0.3s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+}
+
+/* Hamburger animation */
+.hamburger-menu.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-menu.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* Main Content */
+.main-content {
+    flex: 1;
+    /* Allows main to grow */
+    padding-bottom: 30px;
+    /* Space above footer */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #eee;
+    /* Placeholder background */
+    min-height: 400px;
+    /* Minimum height for hero */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+.hero-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    /* For z-index stacking */
+    z-index: 2;
+    /* Content on top of background image */
+}
+
+.hero-text-content {
+    text-align: center;
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Semi-transparent background for text */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.hero-text-content h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.hero-text-content p {
+    font-size: 1.1em;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 90%;
+    max-width: 300px;
+}
+
+.search-box input {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.search-box button {
+    padding: 10px 15px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.search-box button:hover {
+    background-color: #90caf9;
+    /* Lighter accent on hover */
+}
+
+.background-image-placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/cozy-bookstore-small.jpg');
+    /* Mobile hero image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    /* Behind content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.background-image-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Dark overlay for readability */
+}
+
+/* Store Info Sections (Mobile) */
+.store-info-sections .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 30px;
+}
+
+.store-image-placeholder,
+.new-arrivals-section,
+.scenario-section {
+    /* Renamed class for styling */
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.store-image-placeholder {
+    min-height: 200px;
+    /* Placeholder height */
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #666;
+    font-size: 1.2em;
+}
+
+.arrivals-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    /* Single column on mobile */
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.arrival-item {
+    background-color: var(--secondary-color);
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px dashed var(--border-color);
+    text-align: left;
+    font-size: 0.9em;
+}
+
+/* Scenario Section Specific Styles */
+.scenario-questions {
+    margin-top: 15px;
+    text-align: left;
+    /* Align text within questions */
+}
+
+.question-item {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed var(--border-color);
+}
+
+.question-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.question-item h4 {
+    color: var(--primary-color);
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.question-item p {
+    font-size: 0.9em;
+    line-height: 1.5;
+}
+
+
+/* Footer */
+.site-footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9em;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(100%);
+    /* Make social icons white */
+    transition: transform 0.2s ease;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Desktop View (Media Query) */
+@media (min-width: 768px) {
+    .site-title {
+        font-size: 2.5em;
+    }
+
+    /* Navigation (Desktop) */
+    .main-nav .nav-links {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
+    }
+
+    .main-nav .nav-links li {
+        border-bottom: none;
+        margin-left: 25px;
+    }
+
+    .main-nav .nav-links a {
+        padding: 5px 0;
+        background-color: transparent;
+    }
+
+    .main-nav .nav-links a:hover,
+    .main-nav .nav-links a.current {
+        background-color: transparent;
+        text-decoration: underline;
+    }
+
+    .hamburger-menu {
+        display: none;
+    }
+
+    /* Hero Section (Desktop) */
+    .hero-section {
+        min-height: 500px;
+        /* Taller on desktop */
+    }
+
+    .hero-container {
+        flex-direction: row;
+        /* Arrange items horizontally */
+        justify-content: space-around;
+        /* Distribute space */
+        align-items: center;
+        text-align: left;
+    }
+
+    .hero-text-content {
+        flex: 1;
+        /* Allow text to take space */
+        text-align: left;
+        max-width: 50%;
+    }
+
+    .hero-text-content h2 {
+        font-size: 2.5em;
+    }
+
+    .hero-text-content p {
+        font-size: 1.2em;
+    }
+
+    .search-box {
+        flex-direction: row;
+        /* Arrange input and button horizontally */
+        width: auto;
+        max-width: 400px;
+    }
+
+    .search-box input {
+        flex-grow: 1;
+        /* Input takes remaining space */
+    }
+
+    .background-image-placeholder {
+        background-image: url('../images/cozy-bookstore-large.jpg');
+        /* Desktop hero image */
+    }
+
+    /* Store Info Sections (Desktop) */
+    .store-info-sections .container {
+        flex-direction: row;
+        /* Arrange items side-by-side */
+        flex-wrap: wrap;
+        /* Allow wrapping if needed */
+        justify-content: space-between;
+        /* Distribute space */
+    }
+
+    .store-image-placeholder,
+    .new-arrivals-section,
+    .scenario-section {
+        /* Renamed class for styling */
+        flex: 1;
+        /* Distribute space */
+        min-width: 280px;
+        /* Minimum width for columns */
+        max-width: 32%;
+        /* About a third of the container width */
+        margin-bottom: 20px;
+        /* Space between rows if wrapped */
+    }
+
+    /* No specific changes needed for .scenario-questions or .question-item here,
+       as they inherit mobile styles and adjust due to parent flex behavior. */
+
+
+    /* Footer (Desktop) */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .social-icons {
+        margin-top: 0;
+    }
+}
