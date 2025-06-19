@@ -19,7 +19,7 @@ body {
 }
 
 .site-header {
-    background-color: #222;
+    background-color: #0f056b;
     color: #fff;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -294,7 +294,7 @@ p {
     align-items: center;
     /* Center items */
     gap: 20px;
-    padding: 0 10px;
+    padding: 0 15px;
     margin-bottom: 20px;
 }
 
@@ -305,7 +305,6 @@ p {
 
 .owner-photo {
     width: 150px;
-    /* Fixed size for owner photo */
     height: 150px;
     border-radius: 50%;
     /* Make it round */
@@ -442,7 +441,7 @@ p {
 }
 
 .button {
-    background-color: #007bff;
+    background-color: #0f056b;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -456,7 +455,7 @@ p {
 }
 
 .button:hover {
-    background-color: #0056b3;
+    background-color: #2817c4;
 }
 
 .comments-display {
@@ -486,7 +485,7 @@ p {
 
 /* Footer Styles */
 .site-footer {
-    background-color: #222;
+    background-color: #0f056b;
     color: #fff;
     text-align: center;
     padding: 20px 0;
@@ -500,23 +499,17 @@ p {
 
 .site-footer .social-icons a {
     color: #fff;
-    font-size: 24px;
+    font-size: 16px;
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.site-footer .social-icons a:hover {
-    color: #007bff;
-}
-
-/* --- Responsive Adjustments (Media Queries) --- */
 
 /* For Tablet and larger screens (e.g., min-width: 768px) */
 @media (min-width: 768px) {
     .site-header .container {
         justify-content: flex-start;
-        /* Align header items to start on larger screens */
     }
 
     .site-branding {
@@ -607,7 +600,6 @@ p {
     }
 
     .owner-content .owner-photo {
-        flex-shrink: 0;
         margin-right: 20px;
         /* Space between photo and text */
     }
