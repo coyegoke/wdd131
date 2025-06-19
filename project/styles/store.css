@@ -2,39 +2,33 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #fff;
+    color: #000;
 }
 
 .container {
     width: 100%;
-    /* Full width on mobile */
     max-width: 1200px;
     /* Max width for larger screens */
     margin: 0 auto;
     /* Center the container */
     padding: 0 15px;
-    /* Add padding on sides */
     box-sizing: border-box;
-    /* Include padding in width */
 }
 
-/* Header Styles */
 .site-header {
     background-color: #222;
     color: #fff;
     padding: 15px 0;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     display: flex;
-    /* Use flexbox for header content */
     justify-content: space-between;
     /* Space out title/logo and hamburger/nav */
     align-items: center;
     /* Vertically align items */
     flex-wrap: wrap;
-    /* Allow items to wrap on smaller screens */
 }
 
 .site-header .container {
@@ -42,15 +36,11 @@ body {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    /* Ensure container takes full width within header */
 }
 
-/* Site Branding (Logo and Title) */
 .site-branding {
     display: flex;
-    /* Use flexbox to align logo and title */
     align-items: center;
-    /* Vertically center them */
     gap: 10px;
     /* Space between logo and title */
     padding-left: 15px;
@@ -59,14 +49,10 @@ body {
 
 .site-logo {
     width: 40px;
-    /* Set a fixed size for the logo */
     height: 40px;
     border-radius: 50%;
     /* Make it round (optional) */
     object-fit: cover;
-    /* Ensure image covers the circle */
-    border: 2px solid #fff;
-    /* Optional: white border */
 }
 
 .site-title {
@@ -305,10 +291,10 @@ p {
 .owner-content {
     display: flex;
     flex-direction: column;
-    /* Stack content and image vertically on mobile */
     align-items: center;
     /* Center items */
     gap: 20px;
+    padding: 0 10px;
     margin-bottom: 20px;
 }
 
