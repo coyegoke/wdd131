@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Independent Bookstore - Oyegoke C. Oyetunji">
+    <title>Independent Bookstore - Contact & Location</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/store.css">
+    <script src="scripts/store.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Section: Contains the website title, logo, navigation, and hamburger icon -->
+    <header class="site-header">
+        <div class="container">
+            <div class="site-branding">
+                <img src="images/bookstore-logo.jpg" alt="Bookstore Logo" class="site-logo">
+                <h1 class="site-title">Independent Bookstore</h1>
+            </div>
+            <div class="hamburger-menu" id="hamburger-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <nav class="main-nav" id="main-nav-links">
+                <ul>
+                    <li><a href="store.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="collections.html">Our Collections</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="container">
+        <!-- Store Information Section -->
+        <section class="section-content">
+            <h2>Store Information</h2>
+            <div class="store-info-grid">
+                <div class="info-block">
+                    <h3>Store Hours</h3>
+                    <p><strong>Monday - Friday:</strong> 10:00 AM - 7:00 PM</p>
+                    <p><strong>Saturday:</strong> 11:00 AM - 6:00 PM</p>
+                    <p><strong>Sunday:</strong> 12:00 PM - 5:00 PM</p>
+                </div>
+                <div class="info-block">
+                    <h3>Address</h3>
+                    <p>23 Bookstore Lane</p>
+                    <p>Literary City, LC 10001</p>
+                    <p>Nigeria</p>
+                </div>
+                <div class="info-block">
+                    <h3>Contact Us</h3>
+                    <p><strong>Phone:</strong> (234) 816-123-6794</p>
+                    <p><strong>Email:</strong> <a
+                            href="mailto:info@independentbookstore.com">info@independentbookstore.com</a></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Map Section -->
+        <section class="section-content">
+            <h2>Our Location</h2>
+            <div class="map-container">
+                <!-- Google Maps Embed - Replace with your actual map embed code -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d253692.0352485692!2d3.1987106!3d6.5295087!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b921776d4cd3f%3A0x82bfa6a8a3177ddf!2sLagos%20Marriott%20Hotel%20Ikeja!5e0!3m2!1sen!2sng!4v1750371210995!5m2!1sen!2sng"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade" class="responsive-map"></iframe>
+            </div>
+            <p class="map-note"><em>(Note: For a real interactive map, a map service API is required. This is a
+                    basic embed.)</em></p>
+        </section>
+
+        <!-- Sign Up Form Section -->
+        <section class="section-content form-section">
+            <h2>Sign Up for Our Newsletter</h2>
+            <form id="newsletter-form" class="basic-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit" class="button">Sign Up</button>
+            </form>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="section-content form-section">
+            <h2>Leave Us a Comment</h2>
+            <form id="comment-form" class="basic-form">
+                <label for="comment-name">Your Name:</label>
+                <input type="text" id="comment-name" name="comment-name" required>
+
+                <label for="comment-email">Your Email (optional):</label>
+                <input type="email" id="comment-email" name="comment-email">
+
+                <label for="comment-text">Your Comment:</label>
+                <textarea id="comment-text" name="comment-text" rows="5" required></textarea>
+
+                <button type="submit" class="button">Submit Comment</button>
+            </form>
+
+            <div class="comments-display">
+                <h3>Recent Comments:</h3>
+                <!-- Placeholder for dynamic comments -->
+                <div class="comment-item">
+                    <p class="comment-meta"><strong>Philip Ojo</strong> on June 15, 2025</p>
+                    <p class="comment-text"><em>"Love this bookstore! Such a cozy atmosphere and a great
+                            selection."</em></p>
+                </div>
+                <div class="comment-item">
+                    <p class="comment-meta"><strong>Olubunmi Omowumi</strong> on June 10, 2025</p>
+                    <p class="comment-text"><em>"Found some rare gems here. Highly recommend!"</em></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="site-footer">
+        <div id="footer-content" class="container">
+            <!-- Content will be injected by JavaScript -->
+        </div>
+    </footer>
+</body>
+
+</html>
